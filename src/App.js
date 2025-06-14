@@ -6,12 +6,14 @@ import Projects from './components/Projects';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
+import Debug from './components/Debug';
 import './App.css';
 import './styles.css';
 
 function App() {
     const [isSticky, setIsSticky] = useState(false);
     const [showBackToTop, setShowBackToTop] = useState(false);
+    const [debugEnabled, setDebugEnabled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,6 +26,22 @@ function App() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            // Toggle debug mode with Ctrl+Shift+D
+            if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+                e.preventDefault();
+                setDebugEnabled(prev => !prev);
+                console.log(`[Debug] Debug mode ${!debugEnabled ? 'enabled' : 'disabled'}`);
+            }
+        };
+        
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [debugEnabled]);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -151,6 +169,9 @@ function App() {
                         </svg>
                     </button>
                 )}
+                
+                {/* Debug panel that can be toggled with Ctrl+Shift+D */}
+                <Debug enabled={debugEnabled} />
             </div>
         </Router>
     );

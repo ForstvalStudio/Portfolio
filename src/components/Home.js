@@ -48,53 +48,103 @@ const Home = () => {
                 </div>
             </section>
             
-            <section>
-                <h2 className="section-title">Featured Projects</h2>
-                <div className="project-gallery">
-                    <div className="project-card">
-                        <div className="project-image" style={{backgroundColor: '#f0f0f0', height: '250px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <span>Windows App</span>
+            <section className="featured-projects">
+                <div className="container">
+                    <h2 className="section-title">Featured Projects</h2>
+                    <div className="project-gallery">
+                        <div className="project-card">
+                            <div className="project-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="Windows App" />
+                                <div className="project-category">Windows App</div>
+                            </div>
+                            <div className="project-info">
+                                <h3>Enterprise Management System</h3>
+                                <p>A comprehensive ERP system for manufacturing businesses with inventory management, production planning, and financial reporting.</p>
+                                <div className="project-tags">
+                                    <span className="tag">C#</span>
+                                    <span className="tag">.NET</span>
+                                    <span className="tag">WPF</span>
+                                </div>
+                            </div>
+                            <div className="project-overlay">
+                                <div className="overlay-content">
+                                    <h3>Enterprise Management System</h3>
+                                    <span className="category">Windows Application</span>
+                                    <p>A comprehensive ERP system for manufacturing businesses with inventory management, production planning, and financial reporting.</p>
+                                    <button className="btn btn-outline">View Details</button>
+                                </div>
+                            </div>
                         </div>
-                        <div className="project-overlay">
-                            <h3>Enterprise Management System</h3>
-                            <p>Windows Application</p>
+                        <div className="project-card">
+                            <div className="project-image">
+                                <img src="https://images.unsplash.com/photo-1510440777527-38815cfc6cc2?w=800&auto=format&fit=crop&q=80" alt="Mobile App" />
+                                <div className="project-category">Mobile App</div>
+                            </div>
+                            <div className="project-info">
+                                <h3>Health Tracking Solution</h3>
+                                <p>A health and fitness mobile application with workout tracking, nutrition planning, and progress analytics.</p>
+                                <div className="project-tags">
+                                    <span className="tag">Flutter</span>
+                                    <span className="tag">Firebase</span>
+                                    <span className="tag">iOS</span>
+                                    <span className="tag">Android</span>
+                                </div>
+                            </div>
+                            <div className="project-overlay">
+                                <div className="overlay-content">
+                                    <h3>Health Tracking Solution</h3>
+                                    <span className="category">Mobile Application</span>
+                                    <p>A health and fitness mobile application with workout tracking, nutrition planning, and progress analytics.</p>
+                                    <button className="btn btn-outline">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-card">
+                            <div className="project-image">
+                                <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop&q=80" alt="Web3 Project" />
+                                <div className="project-category">Web3 Project</div>
+                            </div>
+                            <div className="project-info">
+                                <h3>Decentralized Finance Platform</h3>
+                                <p>A blockchain-based platform for managing digital assets, tracking investments, and participating in DeFi protocols.</p>
+                                <div className="project-tags">
+                                    <span className="tag">Ethereum</span>
+                                    <span className="tag">Solidity</span>
+                                    <span className="tag">Web3.js</span>
+                                </div>
+                            </div>
+                            <div className="project-overlay">
+                                <div className="overlay-content">
+                                    <h3>Decentralized Finance Platform</h3>
+                                    <span className="category">Web3 Solution</span>
+                                    <p>A blockchain-based platform for managing digital assets, tracking investments, and participating in DeFi protocols.</p>
+                                    <button className="btn btn-outline">View Details</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="project-card">
-                        <div className="project-image" style={{backgroundColor: '#f0f0f0', height: '250px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <span>Mobile App</span>
-                        </div>
-                        <div className="project-overlay">
-                            <h3>Health Tracking Solution</h3>
-                            <p>Mobile Application</p>
-                        </div>
-                    </div>
-                    <div className="project-card">
-                        <div className="project-image" style={{backgroundColor: '#f0f0f0', height: '250px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <span>Web3 Project</span>
-                        </div>
-                        <div className="project-overlay">
-                            <h3>Decentralized Finance Platform</h3>
-                            <p>Web3 Solution</p>
-                        </div>
+                    <div style={{textAlign: 'center', marginTop: '40px'}}>
+                        <a href="/projects" className="btn">View All Projects</a>
                     </div>
                 </div>
             </section>
             
-            <section>
-                <h2 className="section-title">Why Choose Us?</h2>
-                <div className="services-grid">
-                    <div className="service-card">
-                        <h3>Technical Excellence</h3>
-                        <p>Our team of experts delivers high-quality, scalable solutions using the latest technologies.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>Cross-Platform Expertise</h3>
-                        <p>From Windows applications to Web3 solutions, we create seamless experiences across all platforms.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>Innovative Approach</h3>
-                        <p>We stay at the forefront of technology to deliver cutting-edge applications that meet your needs.</p>
+            <section className="choose-us">
+                <div className="container">
+                    <h2 className="section-title">Why Choose Us?</h2>
+                    <div className="benefits-container">
+                        <div className="benefit-card">
+                            <h3>Technical Excellence</h3>
+                            <p>Our team of experts delivers high-quality, scalable solutions using the latest technologies.</p>
+                        </div>
+                        <div className="benefit-card">
+                            <h3>Cross-Platform Expertise</h3>
+                            <p>From Windows applications to Web3 solutions, we create seamless experiences across all platforms.</p>
+                        </div>
+                        <div className="benefit-card">
+                            <h3>Innovative Approach</h3>
+                            <p>We stay at the forefront of technology to deliver cutting-edge applications that meet your needs.</p>
+                        </div>
                     </div>
                 </div>
             </section>
