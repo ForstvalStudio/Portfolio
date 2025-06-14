@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# ORGSTUDIO Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, professional portfolio website for ORGSTUDIO showcasing application development services across multiple platforms. The design features a sleek, grid-based layout with a deep purple/blue color scheme, modern typography, and interactive elements.
+
+This project was built with React and is fully deployment-ready.
 
 ## Available Scripts
 
@@ -28,6 +30,56 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Deployment Instructions
+
+This application has been configured for easy deployment to various hosting platforms:
+
+### Deploying to Netlify
+
+1. Create a Netlify account if you don't have one: [https://app.netlify.com/signup](https://app.netlify.com/signup)
+2. Run `npm run build` to create a production build
+3. Drag and drop your `build` folder to Netlify's dashboard OR
+4. Connect your GitHub repository to Netlify for continuous deployment
+5. The `netlify.toml` file is already configured to handle React Router correctly
+
+### Deploying to GitHub Pages
+
+1. Update the `package.json` file:
+   ```json
+   "homepage": "https://yourusername.github.io/org-portfolio",
+   ```
+2. Install GitHub Pages package:
+   ```
+   npm install --save gh-pages
+   ```
+3. Add deployment scripts to `package.json`:
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+   ```
+4. Deploy your site:
+   ```
+   npm run deploy
+   ```
+
+### Deploying to Vercel
+
+1. Install Vercel CLI:
+   ```
+   npm install -g vercel
+   ```
+2. Run:
+   ```
+   vercel
+   ```
+3. Follow the on-screen instructions to deploy
+
+The app has been pre-configured with:
+- Proper routing for single-page applications
+- SEO-friendly meta tags
+- Mobile-responsive design
+- PWA capabilities
 
 ### `npm run eject`
 
